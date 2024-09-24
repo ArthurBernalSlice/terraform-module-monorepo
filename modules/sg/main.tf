@@ -1,11 +1,13 @@
-variable "ec2_instance_type" {
-    type = string
-    description = "Type of resource instance that will be used."
-    default = "t3.micro"
-}
+resource "aws_security_group" "core_dns" {
+  description = var.security_group_description
 
-variable "ec2_instance_name" {
-    type = string
-    description = "Name that will appear and will identify the EC2 instance inside of the AWS console."
-}
+  vpc_id = var.security_group_vpc_id
 
+  tags = {
+    "Name"                                     = var.security_group_name
+  }
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
