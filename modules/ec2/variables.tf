@@ -11,7 +11,7 @@ variable "ec2_instance_name" {
 
 variable "ec2_ami_id" {
     type = string
-    description = "Id of the AWS AMI that is going to be used for the instance."
+    description = "Id of the AWS AMI that is going to be used for the instance, I am on version 1.0.0."
     default = "ami-00db8dadb36c9815e"
 }
 
