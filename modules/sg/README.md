@@ -6,10 +6,11 @@ To use this module, include it in your Terraform configuration:
 
 Example
 ```hcl
-module "ec2_instance" {
-  source            = "path"
-  version           = "0.1.8"
-  ec2_ami_id       = "ami-00db8dadb36c9815e"  
-  ec2_instance_type = "t2.nano"               
-  ec2_instance_name = "test"          
+module "sg_sample_monorepo" {
+  source  = url
+  version = version
+
+  security_group_name        = sg-name
+  security_group_vpc_id      = vpc-id
+  security_group_description = description
 }
