@@ -1,4 +1,4 @@
-# Terraform EC2 Instance Module
+# Terraform SG  Module
 
 ## Usage
 
